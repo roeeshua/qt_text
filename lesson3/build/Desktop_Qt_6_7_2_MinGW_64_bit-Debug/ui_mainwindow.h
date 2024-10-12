@@ -49,8 +49,8 @@ public:
     QPushButton *btnDel;
     QPushButton *btnDivide;
     QPushButton *btnMultiple;
-    QPushButton *btnSubt;
-    QPushButton *btnAdd;
+    QPushButton *btnMinus;
+    QPushButton *btnPlus;
     QPushButton *btnEqual;
     QLineEdit *display;
     QMenuBar *menubar;
@@ -60,7 +60,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(413, 309);
+        MainWindow->resize(413, 310);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -217,19 +217,19 @@ public:
 
         gridLayout->addWidget(btnMultiple, 4, 3, 1, 1);
 
-        btnSubt = new QPushButton(centralwidget);
-        btnSubt->setObjectName("btnSubt");
-        sizePolicy.setHeightForWidth(btnSubt->sizePolicy().hasHeightForWidth());
-        btnSubt->setSizePolicy(sizePolicy);
+        btnMinus = new QPushButton(centralwidget);
+        btnMinus->setObjectName("btnMinus");
+        sizePolicy.setHeightForWidth(btnMinus->sizePolicy().hasHeightForWidth());
+        btnMinus->setSizePolicy(sizePolicy);
 
-        gridLayout->addWidget(btnSubt, 5, 3, 1, 1);
+        gridLayout->addWidget(btnMinus, 5, 3, 1, 1);
 
-        btnAdd = new QPushButton(centralwidget);
-        btnAdd->setObjectName("btnAdd");
-        sizePolicy.setHeightForWidth(btnAdd->sizePolicy().hasHeightForWidth());
-        btnAdd->setSizePolicy(sizePolicy);
+        btnPlus = new QPushButton(centralwidget);
+        btnPlus->setObjectName("btnPlus");
+        sizePolicy.setHeightForWidth(btnPlus->sizePolicy().hasHeightForWidth());
+        btnPlus->setSizePolicy(sizePolicy);
 
-        gridLayout->addWidget(btnAdd, 6, 3, 1, 1);
+        gridLayout->addWidget(btnPlus, 6, 3, 1, 1);
 
         btnEqual = new QPushButton(centralwidget);
         btnEqual->setObjectName("btnEqual");
@@ -285,8 +285,8 @@ public:
         btnDel->setText(QCoreApplication::translate("MainWindow", "\342\214\253", nullptr));
         btnDivide->setText(QCoreApplication::translate("MainWindow", "\303\267", nullptr));
         btnMultiple->setText(QCoreApplication::translate("MainWindow", "\303\227", nullptr));
-        btnSubt->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
-        btnAdd->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
+        btnMinus->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
+        btnPlus->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         btnEqual->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
         display->setPlaceholderText(QCoreApplication::translate("MainWindow", "0", nullptr));
     } // retranslateUi
