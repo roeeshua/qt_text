@@ -22,6 +22,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnMinus,SIGNAL(clicked()),this,SLOT(binaryOperatorClicked()));
     connect(ui->btnMultiple,SIGNAL(clicked()),this,SLOT(binaryOperatorClicked()));
     connect(ui->btnDivide,SIGNAL(clicked()),this,SLOT(binaryOperatorClicked()));
+
+    connect(ui->btnDaoShu,SIGNAL(clicked()),this,SLOT(danOperatorClicked()));
+    connect(ui->btnSquare,SIGNAL(clicked()),this,SLOT(danOperatorClicked()));
+    connect(ui->btnSqrt,SIGNAL(clicked()),this,SLOT(danOperatorClicked()));
+    connect(ui->btnPOM,SIGNAL(clicked()),this,SLOT(danOperatorClicked()));
+    connect(ui->btnPercentage,SIGNAL(clicked()),this,SLOT(danOperatorClicked()));
 }
 
 MainWindow::~MainWindow()
@@ -39,18 +45,20 @@ QString MainWindow::calculation(bool *ok)
         operands.pop_front();
         double operand2=operands.front().toDouble();
         operands.pop_front();
+        lastnum=QString::number(operand2);
 
         //取操作符
         QString op=opcodes.front();
         opcodes.pop_front();
+        lastcode=op;
 
         if(op=="+"){
             result= operand1+operand2;
         }else if(op=="-"){
             result= operand1-operand2;
-        }else if(op=="*"){
+        }else if(op=="×"){
             result= operand1*operand2;
-        }else if(op=="/"){
+        }else if(op=="÷"){
             result= operand1/operand2;
         }
         ui->statusbar->showMessage(QString("calculation is in progress:operands is %1,opcode is %2").arg(operands.size()).arg(opcodes.size()));
@@ -66,8 +74,7 @@ void MainWindow::btnNumClicked()
 
     if(digit =="0"&& operand=="0")
         digit="";
-
-    if(digit !="0"&& operand=="0")
+    else if(digit !="0"&& operand=="0")
         operand="";
 
     operand += digit;
@@ -96,6 +103,10 @@ void MainWindow::on_btnClearAll_clicked()
 {
     operand.clear();
     ui->display->setText(operand);
+    lastnum=NULL;
+    lastcode=NULL;
+    operands.clear();
+    opcodes.clear();
 }
 
 void MainWindow::binaryOperatorClicked()
@@ -103,7 +114,18 @@ void MainWindow::binaryOperatorClicked()
     ui->statusbar->showMessage("last operand"+operand);
     QString opcode=qobject_cast<QPushButton*>(sender())->text();
 
-    qDebug()<<opcode;
+    qDebug()<<operands.size()<<" "<<opcodes.size();
+    if(operands.size()==1 && opcodes.size() ==1)
+    {
+        operands.push_back(operand);
+        QString result=calculation();
+        ui->display->setText(result);
+        operands.push_back(result);
+        opcodes.push_back(opcode);
+        operand = "";
+        return;
+    }
+
     if(operand !="")
     {
         operands.push_back(operand);
@@ -111,21 +133,78 @@ void MainWindow::binaryOperatorClicked()
 
         opcodes.push_back(opcode);
     }
+    else if(operand==""  && opcodes.size()==0){
+        operands.push_back("0");
+        opcodes.push_back(opcode);
+    }
+    else
+        return;
 
     QString result=calculation();
-
     ui->display->setText(result);
 }
 
 void MainWindow::on_btnEqual_clicked()
 {
-    if(operand !="")
+    if(operands.size()==0&&opcodes.size()==0&&!lastnum.isNull()&&!lastcode.isNull())
     {
-        operands.push_back(operand);
-        operand="";
+        double num=operand.toDouble();
+        double num2=lastnum.toDouble();
+        double x=0;
+        if(lastcode=="+"){
+            x= num+num2;
+        }else if(lastcode=="-"){
+            x= num-num2;
+        }else if(lastcode=="×"){
+            x= num*num2;
+        }else if(lastcode=="÷"){
+            x= num/num2;
+        }
+        QString result=QString::number(x);
+        ui->display->setText(result);
+        operand=result;
     }
+    else
+    {
+        if(operand !="" && opcodes.size()>0)
+        {
+            operands.push_back(operand);
+            operand="";
+        }
+        else if(opcodes.size()==0)
+        {
+            return;
+        }
 
-    QString result=calculation();
-    ui->display->setText(result);
+        QString result=calculation();
+        ui->display->setText(result);
+        operand=result;
+    }
+}
+
+void MainWindow::danOperatorClicked()//单运算符函数
+{
+    double result=operand.toDouble();
+    QString danopcode=qobject_cast<QPushButton*>(sender())->text();
+    if(danopcode=="%"){
+        result/=100;
+    }else if(danopcode=="x²"){
+        result=result*result;
+    }else if(danopcode=="√x"){
+        result=sqrt(result);
+    }else if(danopcode=="1/x"){
+        result=1/result;
+    }else if(danopcode=="+/-"){
+        result=-result;
+    }
+    operand=QString::number(result);
+    ui->display->setText(operand);
+}
+
+
+void MainWindow::on_btnClear_clicked()
+{
+    operand.clear();
+    ui->display->setText(operand);
 }
 

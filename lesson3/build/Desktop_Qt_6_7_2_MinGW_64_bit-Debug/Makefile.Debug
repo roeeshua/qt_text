@@ -304,6 +304,13 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtCore/qlocale.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/QLabel \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qpicture.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtCore/QStack \
+		../../../../../../QT/6.7.2/mingw_64/include/QtCore/qstack.h \
 		debug/moc_predefs.h \
 		../../../../QT/6.7.2/mingw_64/bin/moc.exe
 	F:\QT\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include F:/Qt/lesson3/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IF:/QT/6.7.2/mingw_64/mkspecs/win32-g++ -IF:/Qt/lesson3 -IF:/QT/6.7.2/mingw_64/include -IF:/QT/6.7.2/mingw_64/include/QtWidgets -IF:/QT/6.7.2/mingw_64/include/QtGui -IF:/QT/6.7.2/mingw_64/include/QtCore -I. -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IF:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -520,6 +527,13 @@ debug/main.o: ../../main.cpp ../../mainwindow.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtCore/qlocale.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/QLabel \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qpicture.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtCore/QStack \
+		../../../../../../QT/6.7.2/mingw_64/include/QtCore/qstack.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/QApplication \
 		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\..\main.cpp
@@ -713,6 +727,13 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtCore/qlocale.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/QLabel \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtWidgets/qframe.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qpicture.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
+		../../../../../../QT/6.7.2/mingw_64/include/QtCore/QStack \
+		../../../../../../QT/6.7.2/mingw_64/include/QtCore/qstack.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\mainwindow.cpp
 

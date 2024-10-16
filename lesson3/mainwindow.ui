@@ -335,7 +335,7 @@
          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
         </property>
         <property name="placeholderText">
-         <string>0</string>
+         <string/>
         </property>
        </widget>
       </item>

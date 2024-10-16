@@ -288,7 +288,7 @@ public:
         btnMinus->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
         btnPlus->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         btnEqual->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
-        display->setPlaceholderText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        display->setPlaceholderText(QString());
     } // retranslateUi
 
 };

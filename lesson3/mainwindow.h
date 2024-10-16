@@ -24,6 +24,8 @@ public:
     QStack<QString> operands;
     QStack<QString> opcodes;
     QString calculation(bool *ok=NULL);
+    QString lastnum = NULL;
+    QString lastcode = NULL;
 
 private slots:
     void btnNumClicked();
@@ -37,6 +39,11 @@ private slots:
     void on_btnClearAll_clicked();
 
     void on_btnEqual_clicked();
+
+    void danOperatorClicked();
+
+
+    void on_btnClear_clicked();
 
 private:
     Ui::MainWindow *ui;
