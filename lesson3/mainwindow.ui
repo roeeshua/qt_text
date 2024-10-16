@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>计算器-黄展鸿-2022414120109</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/zhanh/Desktop/ppt背景/OIP-C (1).jpg</normaloff>C:/Users/zhanh/Desktop/ppt背景/OIP-C (1).jpg</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QPushButton{

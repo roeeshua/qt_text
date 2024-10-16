@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QLabel>
 #include <QStack>
+#include <QKeyEvent>
+#include <QMap>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,7 +21,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    QMap<int,QPushButton *> digitBTNs;
     QString operand;
     QString opcode;
     QStack<QString> operands;
@@ -44,6 +47,8 @@ private slots:
 
 
     void on_btnClear_clicked();
+
+    virtual void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::MainWindow *ui;

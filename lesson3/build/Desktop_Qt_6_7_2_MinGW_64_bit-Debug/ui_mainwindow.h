@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLineEdit>
@@ -61,6 +62,9 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(441, 377);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("C:/Users/zhanh/Desktop/ppt\350\203\214\346\231\257/OIP-C (1).jpg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        MainWindow->setWindowIcon(icon);
         MainWindow->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	font-size:12pt;\n"
 "	border-radius:2px;\n"
@@ -617,7 +621,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\350\256\241\347\256\227\345\231\250-\351\273\204\345\261\225\351\270\277-2022414120109", nullptr));
         btnClearAll->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
         btnPeriod->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
         btnDaoShu->setText(QCoreApplication::translate("MainWindow", "1/x", nullptr));
