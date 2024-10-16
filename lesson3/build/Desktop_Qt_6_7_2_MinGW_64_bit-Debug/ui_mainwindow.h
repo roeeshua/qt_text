@@ -60,7 +60,11 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(413, 310);
+        MainWindow->resize(441, 377);
+        MainWindow->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	font-size:12pt;\n"
+"	border-radius:2px;\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -74,6 +78,19 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(btnClearAll->sizePolicy().hasHeightForWidth());
         btnClearAll->setSizePolicy(sizePolicy);
+        btnClearAll->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	background-color: rgb(255, 255, 127);\n"
+"	color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(42, 42, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnClearAll, 1, 2, 1, 1);
 
@@ -81,6 +98,19 @@ public:
         btnPeriod->setObjectName("btnPeriod");
         sizePolicy.setHeightForWidth(btnPeriod->sizePolicy().hasHeightForWidth());
         btnPeriod->setSizePolicy(sizePolicy);
+        btnPeriod->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnPeriod, 7, 2, 1, 1);
 
@@ -88,6 +118,19 @@ public:
         btnDaoShu->setObjectName("btnDaoShu");
         sizePolicy.setHeightForWidth(btnDaoShu->sizePolicy().hasHeightForWidth());
         btnDaoShu->setSizePolicy(sizePolicy);
+        btnDaoShu->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnDaoShu, 3, 0, 1, 1);
 
@@ -95,6 +138,22 @@ public:
         btnNum3->setObjectName("btnNum3");
         sizePolicy.setHeightForWidth(btnNum3->sizePolicy().hasHeightForWidth());
         btnNum3->setSizePolicy(sizePolicy);
+        btnNum3->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum3, 6, 2, 1, 1);
 
@@ -102,6 +161,19 @@ public:
         btnPercentage->setObjectName("btnPercentage");
         sizePolicy.setHeightForWidth(btnPercentage->sizePolicy().hasHeightForWidth());
         btnPercentage->setSizePolicy(sizePolicy);
+        btnPercentage->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnPercentage, 1, 0, 1, 1);
 
@@ -109,6 +181,22 @@ public:
         btnNum8->setObjectName("btnNum8");
         sizePolicy.setHeightForWidth(btnNum8->sizePolicy().hasHeightForWidth());
         btnNum8->setSizePolicy(sizePolicy);
+        btnNum8->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum8, 4, 1, 1, 1);
 
@@ -116,6 +204,22 @@ public:
         btnNum4->setObjectName("btnNum4");
         sizePolicy.setHeightForWidth(btnNum4->sizePolicy().hasHeightForWidth());
         btnNum4->setSizePolicy(sizePolicy);
+        btnNum4->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum4, 5, 0, 1, 1);
 
@@ -123,6 +227,19 @@ public:
         btnPOM->setObjectName("btnPOM");
         sizePolicy.setHeightForWidth(btnPOM->sizePolicy().hasHeightForWidth());
         btnPOM->setSizePolicy(sizePolicy);
+        btnPOM->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnPOM, 7, 0, 1, 1);
 
@@ -130,6 +247,22 @@ public:
         btnNum2->setObjectName("btnNum2");
         sizePolicy.setHeightForWidth(btnNum2->sizePolicy().hasHeightForWidth());
         btnNum2->setSizePolicy(sizePolicy);
+        btnNum2->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum2, 6, 1, 1, 1);
 
@@ -137,6 +270,19 @@ public:
         btnSqrt->setObjectName("btnSqrt");
         sizePolicy.setHeightForWidth(btnSqrt->sizePolicy().hasHeightForWidth());
         btnSqrt->setSizePolicy(sizePolicy);
+        btnSqrt->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnSqrt, 3, 2, 1, 1);
 
@@ -144,6 +290,19 @@ public:
         btnSquare->setObjectName("btnSquare");
         sizePolicy.setHeightForWidth(btnSquare->sizePolicy().hasHeightForWidth());
         btnSquare->setSizePolicy(sizePolicy);
+        btnSquare->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnSquare, 3, 1, 1, 1);
 
@@ -151,6 +310,22 @@ public:
         btnNum5->setObjectName("btnNum5");
         sizePolicy.setHeightForWidth(btnNum5->sizePolicy().hasHeightForWidth());
         btnNum5->setSizePolicy(sizePolicy);
+        btnNum5->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum5, 5, 1, 1, 1);
 
@@ -158,6 +333,22 @@ public:
         btnNum6->setObjectName("btnNum6");
         sizePolicy.setHeightForWidth(btnNum6->sizePolicy().hasHeightForWidth());
         btnNum6->setSizePolicy(sizePolicy);
+        btnNum6->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum6, 5, 2, 1, 1);
 
@@ -165,6 +356,19 @@ public:
         btnClear->setObjectName("btnClear");
         sizePolicy.setHeightForWidth(btnClear->sizePolicy().hasHeightForWidth());
         btnClear->setSizePolicy(sizePolicy);
+        btnClear->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	background-color: rgb(255, 255, 127);\n"
+"	color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(42, 42, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnClear, 1, 1, 1, 1);
 
@@ -172,6 +376,22 @@ public:
         btnNum0->setObjectName("btnNum0");
         sizePolicy.setHeightForWidth(btnNum0->sizePolicy().hasHeightForWidth());
         btnNum0->setSizePolicy(sizePolicy);
+        btnNum0->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum0, 7, 1, 1, 1);
 
@@ -179,6 +399,22 @@ public:
         btnNum7->setObjectName("btnNum7");
         sizePolicy.setHeightForWidth(btnNum7->sizePolicy().hasHeightForWidth());
         btnNum7->setSizePolicy(sizePolicy);
+        btnNum7->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum7, 4, 0, 1, 1);
 
@@ -186,6 +422,22 @@ public:
         btnNum9->setObjectName("btnNum9");
         sizePolicy.setHeightForWidth(btnNum9->sizePolicy().hasHeightForWidth());
         btnNum9->setSizePolicy(sizePolicy);
+        btnNum9->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum9, 4, 2, 1, 1);
 
@@ -193,6 +445,22 @@ public:
         btnNum1->setObjectName("btnNum1");
         sizePolicy.setHeightForWidth(btnNum1->sizePolicy().hasHeightForWidth());
         btnNum1->setSizePolicy(sizePolicy);
+        btnNum1->setStyleSheet(QString::fromUtf8("QPushButton:hover{\n"
+"	color: rgb(255,255,255);\n"
+"	background-color: rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"	color: rgb(0, 0, 0);\n"
+"	background-color: rgb(85, 255, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"\n"
+""));
 
         gridLayout->addWidget(btnNum1, 6, 0, 1, 1);
 
@@ -200,6 +468,19 @@ public:
         btnDel->setObjectName("btnDel");
         sizePolicy.setHeightForWidth(btnDel->sizePolicy().hasHeightForWidth());
         btnDel->setSizePolicy(sizePolicy);
+        btnDel->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	background-color: rgb(255, 255, 127);\n"
+"	color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(42, 42, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnDel, 1, 3, 1, 1);
 
@@ -207,6 +488,19 @@ public:
         btnDivide->setObjectName("btnDivide");
         sizePolicy.setHeightForWidth(btnDivide->sizePolicy().hasHeightForWidth());
         btnDivide->setSizePolicy(sizePolicy);
+        btnDivide->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnDivide, 3, 3, 1, 1);
 
@@ -214,6 +508,19 @@ public:
         btnMultiple->setObjectName("btnMultiple");
         sizePolicy.setHeightForWidth(btnMultiple->sizePolicy().hasHeightForWidth());
         btnMultiple->setSizePolicy(sizePolicy);
+        btnMultiple->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnMultiple, 4, 3, 1, 1);
 
@@ -221,6 +528,19 @@ public:
         btnMinus->setObjectName("btnMinus");
         sizePolicy.setHeightForWidth(btnMinus->sizePolicy().hasHeightForWidth());
         btnMinus->setSizePolicy(sizePolicy);
+        btnMinus->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnMinus, 5, 3, 1, 1);
 
@@ -228,6 +548,19 @@ public:
         btnPlus->setObjectName("btnPlus");
         sizePolicy.setHeightForWidth(btnPlus->sizePolicy().hasHeightForWidth());
         btnPlus->setSizePolicy(sizePolicy);
+        btnPlus->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: rgb(255, 0, 127);\n"
+"color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(85, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnPlus, 6, 3, 1, 1);
 
@@ -235,11 +568,32 @@ public:
         btnEqual->setObjectName("btnEqual");
         sizePolicy.setHeightForWidth(btnEqual->sizePolicy().hasHeightForWidth());
         btnEqual->setSizePolicy(sizePolicy);
+        btnEqual->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	background-color: rgb(255, 255, 127);\n"
+"	color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(42, 42, 0);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
 
         gridLayout->addWidget(btnEqual, 7, 3, 1, 1);
 
         display = new QLineEdit(centralwidget);
         display->setObjectName("display");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(display->sizePolicy().hasHeightForWidth());
+        display->setSizePolicy(sizePolicy1);
+        display->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"font: 12pt \"Microsoft YaHei UI\";\n"
+"color: rgb(0, 0, 0);"));
         display->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
         gridLayout->addWidget(display, 0, 0, 1, 4);
@@ -250,7 +604,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 413, 24));
+        menubar->setGeometry(QRect(0, 0, 441, 24));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
