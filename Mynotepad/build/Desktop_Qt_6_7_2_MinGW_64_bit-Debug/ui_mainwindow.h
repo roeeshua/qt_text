@@ -222,6 +222,7 @@ public:
         MainWindow->setMenuBar(menubar);
         toolBar = new QToolBar(MainWindow);
         toolBar->setObjectName("toolBar");
+        toolBar->setToolButtonStyle(Qt::ToolButtonStyle::ToolButtonTextUnderIcon);
         MainWindow->addToolBar(Qt::ToolBarArea::TopToolBarArea, toolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName("statusBar");
@@ -246,8 +247,9 @@ public:
         menu_O->addAction(actionUneWrap);
         menu_V->addAction(actionShowToolbar);
         menu_V->addAction(actionShowstatusbar);
-        menu_H->addAction(actionFind);
-        menu_H->addAction(actionReplace);
+        menu_V->addAction(actionFind);
+        menu_V->addAction(actionReplace);
+        menu_H->addAction(actionAbout);
         toolBar->addAction(actionNew);
         toolBar->addAction(actionOpen);
         toolBar->addAction(actionSave);
