@@ -10,6 +10,7 @@
 #define UI_ABOUTDIALOG_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QAbstractButton>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
@@ -26,7 +27,7 @@ public:
     QDialogButtonBox *buttonBox;
     QLabel *label;
     QLabel *label_5;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLabel *label_2;
     QLabel *label_3;
@@ -37,6 +38,8 @@ public:
         if (AboutDialog->objectName().isEmpty())
             AboutDialog->setObjectName("AboutDialog");
         AboutDialog->resize(433, 313);
+        QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::HelpAbout));
+        AboutDialog->setWindowIcon(icon);
         buttonBox = new QDialogButtonBox(AboutDialog);
         buttonBox->setObjectName("buttonBox");
         buttonBox->setGeometry(QRect(30, 240, 341, 32));
@@ -52,23 +55,23 @@ public:
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(30, 100, 121, 131));
         label_5->setStyleSheet(QString::fromUtf8("border-image: url(:/img/OIP-C.jpg);"));
-        widget = new QWidget(AboutDialog);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(200, 100, 208, 73));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(AboutDialog);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(200, 100, 208, 73));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName("label_2");
 
         verticalLayout->addWidget(label_2);
 
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName("label_3");
 
         verticalLayout->addWidget(label_3);
 
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName("label_4");
 
         verticalLayout->addWidget(label_4);
@@ -83,7 +86,7 @@ public:
 
     void retranslateUi(QDialog *AboutDialog)
     {
-        AboutDialog->setWindowTitle(QCoreApplication::translate("AboutDialog", "Dialog", nullptr));
+        AboutDialog->setWindowTitle(QCoreApplication::translate("AboutDialog", "\345\205\263\344\272\216", nullptr));
         label->setText(QCoreApplication::translate("AboutDialog", "\346\210\210\344\273\221\346\226\207\346\234\254\347\274\226\350\276\221\345\231\250", nullptr));
         label_5->setText(QString());
         label_2->setText(QCoreApplication::translate("AboutDialog", "\345\274\200\345\217\221\350\200\205\357\274\232\351\273\204\345\261\225\351\270\277", nullptr));

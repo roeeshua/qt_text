@@ -10,6 +10,7 @@
 #define UI_REPLACEDIALOG_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDialog>
@@ -60,7 +61,9 @@ public:
     {
         if (ReplaceDialog->objectName().isEmpty())
             ReplaceDialog->setObjectName("ReplaceDialog");
-        ReplaceDialog->resize(484, 187);
+        ReplaceDialog->resize(495, 187);
+        QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::MediaPlaylistRepeat));
+        ReplaceDialog->setWindowIcon(icon);
         gridLayout = new QGridLayout(ReplaceDialog);
         gridLayout->setObjectName("gridLayout");
         verticalLayout_2 = new QVBoxLayout();
@@ -218,7 +221,7 @@ public:
 
     void retranslateUi(QDialog *ReplaceDialog)
     {
-        ReplaceDialog->setWindowTitle(QCoreApplication::translate("ReplaceDialog", "Dialog", nullptr));
+        ReplaceDialog->setWindowTitle(QCoreApplication::translate("ReplaceDialog", "\346\233\277\346\215\242", nullptr));
         label->setText(QCoreApplication::translate("ReplaceDialog", "\346\237\245\346\211\276\347\233\256\346\240\207\357\274\232", nullptr));
         label_2->setText(QCoreApplication::translate("ReplaceDialog", "\346\233\277\346\215\242\344\270\272\357\274\232", nullptr));
         checkBox->setText(QCoreApplication::translate("ReplaceDialog", "\345\214\272\345\210\206\345\244\247\345\260\217\345\206\231", nullptr));

@@ -222,7 +222,7 @@ public:
         MainWindow->setMenuBar(menubar);
         toolBar = new QToolBar(MainWindow);
         toolBar->setObjectName("toolBar");
-        toolBar->setToolButtonStyle(Qt::ToolButtonStyle::ToolButtonTextUnderIcon);
+        toolBar->setToolButtonStyle(Qt::ToolButtonStyle::ToolButtonIconOnly);
         MainWindow->addToolBar(Qt::ToolBarArea::TopToolBarArea, toolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName("statusBar");
