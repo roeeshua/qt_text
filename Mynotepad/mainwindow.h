@@ -35,6 +35,32 @@ private slots:
 
     void on_TextEdit_textChanged();
 
+    void on_actCut_triggered();
+
+    void on_actionCopy_triggered();
+
+    void on_actionUndo_triggered();
+
+    void on_actionPaste_triggered();
+
+    void on_actionRedo_triggered();
+
+    void on_TextEdit_copyAvailable(bool b);
+
+    void on_TextEdit_redoAvailable(bool b);
+
+    void on_TextEdit_undoAvailable(bool b);
+
+    void on_actionFontColor_triggered();
+
+    void on_actionEditorBackground_triggered();
+
+    void on_actionFontBackground_triggered();
+
+    void on_actionUneWrap_triggered();
+
+    void on_actionFont_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString filePath;

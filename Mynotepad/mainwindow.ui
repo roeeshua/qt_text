@@ -64,9 +64,14 @@
     <property name="title">
      <string>格式(&amp;O)</string>
     </property>
-    <addaction name="actionFont"/>
     <addaction name="actionShowLineNumber"/>
     <addaction name="actionUneWrap"/>
+    <addaction name="separator"/>
+    <addaction name="actionFont"/>
+    <addaction name="actionFontColor"/>
+    <addaction name="separator"/>
+    <addaction name="actionFontBackground"/>
+    <addaction name="actionEditorBackground"/>
    </widget>
    <widget class="QMenu" name="menu_V">
     <property name="title">
@@ -251,7 +256,7 @@
     <string>Ctrl+C</string>
    </property>
    <property name="menuRole">
-    <enum>QAction::MenuRole::NoRole</enum>
+    <enum>QAction::MenuRole::TextHeuristicRole</enum>
    </property>
   </action>
   <action name="actionPaste">
@@ -320,6 +325,9 @@
    </property>
   </action>
   <action name="actionUneWrap">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset theme="QIcon::ThemeIcon::FormatJustifyCenter"/>
    </property>
@@ -334,6 +342,9 @@
    </property>
   </action>
   <action name="actionShowToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="img.qrc">
      <normaloff>:/img/IcOutlineHandyman.png</normaloff>:/img/IcOutlineHandyman.png</iconset>
@@ -349,6 +360,9 @@
    </property>
   </action>
   <action name="actionShowstatusbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset theme="QIcon::ThemeIcon::DriveHarddisk"/>
    </property>
