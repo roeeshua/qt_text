@@ -38,15 +38,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     QPlainTextEdit::LineWrapMode mode=ui->TextEdit->lineWrapMode();
 
-    if(mode==QPlainTextEdit::NoWrap){
-        ui->TextEdit->setLineWrapMode(QPlainTextEdit::WidgetWidth);
+    ui->actionUneWrap->setChecked(true);
 
-        ui->actionUneWrap->setChecked(false);
-    }else{
-        ui->TextEdit->setLineWrapMode(QPlainTextEdit::NoWrap);
-
-        ui->actionUneWrap->setChecked(true);
-    }
+    ui->actionShowToolbar->setChecked(true);
+    ui->actionShowstatusbar->setChecked(true);
 }
 
 MainWindow::~MainWindow()
@@ -63,14 +58,14 @@ void MainWindow::on_actionAbout_triggered()
 
 void MainWindow::on_actionFind_triggered()
 {
-    SearchDialog dlg;
+    SearchDialog dlg(this,ui->TextEdit);
     dlg.exec();
 }
 
 
 void MainWindow::on_actionReplace_triggered()
 {
-    ReplaceDialog dlg;
+    ReplaceDialog dlg(this,ui->TextEdit);
     dlg.exec();
 }
 
@@ -291,5 +286,40 @@ void MainWindow::on_actionFont_triggered()
     if(ok){
         ui->TextEdit->setFont(font);
     }
+}
+
+
+void MainWindow::on_actionShowToolbar_triggered()
+{
+    bool visible = ui->toolBar->isVisible();
+    ui->toolBar->setVisible(!visible);
+    ui->actionShowToolbar->setChecked(!visible);
+}
+
+
+void MainWindow::on_actionShowstatusbar_triggered()
+{
+    bool visible = ui->statusBar->isVisible();
+    ui->statusBar->setVisible(!visible);
+    ui->actionShowstatusbar->setChecked(!visible);
+}
+
+
+void MainWindow::on_actionSelectAll_triggered()
+{
+    ui->TextEdit->selectAll();
+}
+
+
+void MainWindow::on_actionExit_triggered()
+{
+    if(userEditConfirmed())
+        exit(0);
+}
+
+
+void MainWindow::on_actionFontBackground_triggered()
+{
+
 }
 

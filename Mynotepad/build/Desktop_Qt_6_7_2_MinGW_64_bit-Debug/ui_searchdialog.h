@@ -35,11 +35,11 @@ public:
     QLabel *label;
     QLineEdit *lineEdit;
     QHBoxLayout *horizontalLayout_3;
-    QCheckBox *checkBox;
+    QCheckBox *sen;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_2;
     QSpacerItem *verticalSpacer_2;
-    QRadioButton *radioButton;
+    QRadioButton *rbUp;
     QRadioButton *rbDown;
     QSpacerItem *verticalSpacer_3;
     QSpacerItem *horizontalSpacer;
@@ -86,10 +86,10 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalLayout_3->setSizeConstraint(QLayout::SizeConstraint::SetMaximumSize);
-        checkBox = new QCheckBox(SearchDialog);
-        checkBox->setObjectName("checkBox");
+        sen = new QCheckBox(SearchDialog);
+        sen->setObjectName("sen");
 
-        horizontalLayout_3->addWidget(checkBox);
+        horizontalLayout_3->addWidget(sen);
 
         groupBox = new QGroupBox(SearchDialog);
         groupBox->setObjectName("groupBox");
@@ -104,10 +104,10 @@ public:
 
         gridLayout_2->addItem(verticalSpacer_2, 0, 1, 1, 1);
 
-        radioButton = new QRadioButton(groupBox);
-        radioButton->setObjectName("radioButton");
+        rbUp = new QRadioButton(groupBox);
+        rbUp->setObjectName("rbUp");
 
-        gridLayout_2->addWidget(radioButton, 1, 3, 1, 1);
+        gridLayout_2->addWidget(rbUp, 1, 3, 1, 1);
 
         rbDown = new QRadioButton(groupBox);
         rbDown->setObjectName("rbDown");
@@ -177,9 +177,9 @@ public:
     {
         SearchDialog->setWindowTitle(QCoreApplication::translate("SearchDialog", "\346\237\245\346\211\276", nullptr));
         label->setText(QCoreApplication::translate("SearchDialog", "\346\237\245\346\211\276\347\233\256\346\240\207\357\274\232", nullptr));
-        checkBox->setText(QCoreApplication::translate("SearchDialog", "\345\214\272\345\210\206\345\244\247\345\260\217\345\206\231", nullptr));
+        sen->setText(QCoreApplication::translate("SearchDialog", "\345\214\272\345\210\206\345\244\247\345\260\217\345\206\231", nullptr));
         groupBox->setTitle(QCoreApplication::translate("SearchDialog", "\346\226\271\345\220\221", nullptr));
-        radioButton->setText(QCoreApplication::translate("SearchDialog", "\345\220\221\344\270\212(&U)", nullptr));
+        rbUp->setText(QCoreApplication::translate("SearchDialog", "\345\220\221\344\270\212(&U)", nullptr));
         rbDown->setText(QCoreApplication::translate("SearchDialog", "\345\220\221\344\270\213(&D)", nullptr));
         btFindnext->setText(QCoreApplication::translate("SearchDialog", "\346\237\245\346\211\276\344\270\213\344\270\200\344\270\252\357\274\210&F\357\274\211", nullptr));
         btCancel->setText(QCoreApplication::translate("SearchDialog", "\345\217\226\346\266\210", nullptr));

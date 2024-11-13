@@ -87,7 +87,7 @@ public:
     void retranslateUi(QDialog *AboutDialog)
     {
         AboutDialog->setWindowTitle(QCoreApplication::translate("AboutDialog", "\345\205\263\344\272\216", nullptr));
-        label->setText(QCoreApplication::translate("AboutDialog", "\346\210\210\344\273\221\346\226\207\346\234\254\347\274\226\350\276\221\345\231\250", nullptr));
+        label->setText(QCoreApplication::translate("AboutDialog", "\346\210\210\344\273\221\347\237\263\344\272\272\346\226\207\346\234\254\347\274\226\350\276\221\345\231\250", nullptr));
         label_5->setText(QString());
         label_2->setText(QCoreApplication::translate("AboutDialog", "\345\274\200\345\217\221\350\200\205\357\274\232\351\273\204\345\261\225\351\270\277", nullptr));
         label_3->setText(QCoreApplication::translate("AboutDialog", "\345\255\246\345\217\267\357\274\2322022414120109", nullptr));

@@ -51,7 +51,7 @@
         <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
        </property>
        <item>
-        <widget class="QCheckBox" name="checkBox">
+        <widget class="QCheckBox" name="sen">
          <property name="text">
           <string>区分大小写</string>
          </property>
@@ -83,7 +83,7 @@
            </spacer>
           </item>
           <item row="1" column="3">
-           <widget class="QRadioButton" name="radioButton">
+           <widget class="QRadioButton" name="rbUp">
             <property name="text">
              <string>向上(&amp;U)</string>
             </property>

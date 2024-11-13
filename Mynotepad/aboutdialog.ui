@@ -47,7 +47,7 @@
     </font>
    </property>
    <property name="text">
-    <string>戈仑文本编辑器</string>
+    <string>戈仑石人文本编辑器</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">

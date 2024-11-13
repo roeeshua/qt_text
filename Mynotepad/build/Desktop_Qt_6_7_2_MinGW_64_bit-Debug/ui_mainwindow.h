@@ -240,6 +240,7 @@ public:
         menu_F->addAction(actionOpen);
         menu_F->addAction(actionSave);
         menu_F->addAction(actionSaveAs);
+        menu_F->addAction(actionExit);
         menu_E->addAction(actionUndo);
         menu_E->addAction(actionRedo);
         menu_E->addAction(actCut);
