@@ -104,6 +104,7 @@ void MainWindow::on_actionOpen_triggered()
 
     QTextStream in(&file);
     QString text=in.readAll();
+    ui->TextEdit.clear();
     ui->TextEdit->insertPlainText(text);
     file.close();
 
