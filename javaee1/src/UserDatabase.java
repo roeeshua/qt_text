@@ -2,33 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDatabase {
-    private static List<User> users = new ArrayList<>();
 
     public static boolean register(User user) {
-        for (User u : users) {
-            if (u.getUsername().equals(user.getUsername())) {
-                return false; // 用户名已存在
-            }
+        UserService userService = new UserServiceImpl();
+        if (userService.is_exist(user.getUsername())) {
+            return false; // 用户名已存在
         }
-        users.add(user);
+        userService.add_data(user.getUsername(), user.getPassword());
         return true;
     }
 
-    public static User login(String username, String password) {
-        for (User u : users) {
-            if (u.getUsername().equals(username)) {
-                return u.getPassword().equals(password) ? u : null;
-            }
-        }
-        return null;
+    public static boolean login(String username, String password) {
+        UserService userService = new UserServiceImpl();
+        if (userService.login(username,password))
+            return true;
+        else
+            return false;
     }
 
-    public static boolean userExists(String username) {
-        for (User u : users) {
-            if (u.getUsername().equals(username)) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
